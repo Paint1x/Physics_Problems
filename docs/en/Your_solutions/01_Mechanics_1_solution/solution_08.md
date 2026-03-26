@@ -1,49 +1,41 @@
-# Physics Analysis: Centripetal Acceleration at the Equator
+# Physics: Centripetal Acceleration at Earth's Equator
 
-## 1. Constants and Given Values
-- **Radius of Earth ($R$):** $6378 \text{ km} = 6.378 \times 10^6 \text{ m}$
-- **Rotation Period ($T$):** $24 \text{ hours} = 86,400 \text{ s}$
+## 1. Given Parameters
+- **Radius of Earth ($R$):** $6378 \text{ km} = 6,378,000 \text{ m}$
+- **Time for one rotation ($T$):** $24 \text{ h} = 86,400 \text{ s}$
 
 ---
 
-## 2. Mathematical Formula
-The centripetal acceleration for a rotating sphere is given by:
+## 2. Necessary Formula
+The acceleration required to maintain a circular path is:
 
 $$
-
 a_c = \frac{4 \pi^2 R}{T^2}
-
 $$
 
 ---
 
 ## 3. Calculation Steps
 
-**Step A: Calculate the square of the period ($T^2$)**
+**Step A: Calculate the numerator (top part)**
 
 $$
-
-T^2 = (86,400)^2 = 7,464,960,000 \text{ s}^2
-
+4 \times \pi^2 \times 6,378,000 \approx 251,791,821
 $$
 
-**Step B: Substitute values into the acceleration formula**
+**Step B: Calculate the denominator (bottom part)**
 
 $$
-
-a_c = \frac{4 \times (3.14159)^2 \times 6,378,000}{7,464,960,000}
-
+86,400^2 = 7,464,960,000
 $$
 
-**Step C: Final Result**
+**Step C: Final Division**
 
 $$
-
-a_c \approx 0.0337 \text{ m/s}^2
-
+a_c = \frac{251,791,821}{7,464,960,000} \approx 0.0337 \text{ m/s}^2
 $$
 
 ---
 
 ## 4. Conclusion
-A person standing on the equator experiences a centripetal acceleration of approximately **$0.0337 \text{ m/s}^2$**. This value is very small compared to the acceleration due to gravity ($g \approx 9.8 \text{ m/s}^2$), which is why we do not perceive the Earth's rotation in our daily lives.
+The centripetal acceleration for a person at the equator is approximately **$0.0337 \text{ m/s}^2$**. This is roughly $0.34\%$ of the acceleration due to gravity ($9.8 \text{ m/s}^2$).
