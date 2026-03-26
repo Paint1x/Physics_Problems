@@ -1,42 +1,40 @@
-# Solutions goes here
-import numpy as np
-import matplotlib.pyplot as plt
+# Projectile Motion Analysis
 
-# Constants
-v0 = 100        # Initial velocity (m/s)
-angle = 37      # Launch angle (degrees)
-g = 9.81        # Gravity (m/s^2)
+## Initial Parameters
+- Initial Velocity ($v_0$): $100 \text{ m/s}$
+- Angle ($\theta$): $37^\circ$
+- Gravity ($g$): $9.8 \text{ m/s}^2$
 
-# Convert angle to radians for math functions
-theta = np.radians(angle)
+## 1. Differential Equations of Motion
+Based on Newton's Second Law ($F=ma$):
 
-# Initial velocity components
-v0x = v0 * np.cos(theta)
-v0y = v0 * np.sin(theta)
+**Horizontal:**
+$$
+\frac{d^2x}{dt^2} = 0
+$$
 
-# 1. Time of Flight
-t_flight = (2 * v0y) / g
+**Vertical:**
+$$
+\frac{d^2y}{dt^2} = -g
+$$
 
-# 2. Maximum Height
-h_max = (v0y**2) / (2 * g)
+## 2. Time of Flight
+Initial vertical velocity $v_{0y} = 100 \sin(37^\circ) \approx 60 \text{ m/s}$.
 
-# 3. Horizontal Range
-range_x = v0x * t_flight
+$$
+t_{total} = \frac{2v_{0y}}{g} = \frac{2(60)}{9.8} \approx 12.24 \text{ s}
+$$
 
-print(f"Time of Flight: {t_flight:.2f} s")
-print(f"Max Height: {h_max:.2f} m")
-print(f"Range: {range_x:.2f} m")
+## 3. Maximum Height
+Maximum height occurs when vertical velocity is zero.
 
-# Generate trajectory points for plotting
-t_points = np.linspace(0, t_flight, num=100)
-x_points = v0x * t_points
-y_points = (v0y * t_points) - (0.5 * g * t_points**2)
+$$
+H = \frac{v_{0y}^2}{2g} = \frac{3600}{19.6} \approx 183.67 \text{ m}
+$$
 
-# Plotting
-plt.figure(figsize=(10, 5))
-plt.plot(x_points, y_points)
-plt.title(f'Projectile Trajectory ({v0}m/s at {angle} degrees)')
-plt.xlabel('Distance (m)')
-plt.ylabel('Height (m)')
-plt.grid(True)
-plt.show()
+## 4. Range
+Total horizontal distance covered.
+
+$$
+R = v_{0x} \cdot t_{total} = (100 \cos(37^\circ)) \cdot 12.24 \approx 979.2 \text{ m}
+$$
