@@ -1,117 +1,112 @@
-# Problem 6: Variable Velocity
+# Physics: Position, Velocity, and Acceleration
 
-We are given the velocity function $v(t)=t^2+2t-5$ and the initial position $x(0)=4$.
+This problem tests your understanding of how to use calculus to move between position, velocity, and acceleration. 
 
-We want:
+## 1. The Core Concept
 
-1. The position at $t=3$, i.e. $x(3)$.
-2. The acceleration at $t=3$, i.e. $a(3)$.
+* **Position ($x$):** Where the object is located.
+* **Velocity ($v$):** How fast the object is changing its position. You find this by taking the **derivative** of position.
+* **Acceleration ($a$):** How fast the velocity is changing. You find this by taking the **derivative** of velocity.
 
----
-
-## 1) Position from velocity theory
-
-Velocity is the derivative of position:
-
-$$
-v(t)=\frac{dx}{dt}
-$$
-
-So:
-
-$$
-\frac{dx}{dt}=t^2+2t-5
-$$
-
-Integrate both sides with respect to $t$:
-
-$$
-x(t)=\int (t^2+2t-5)\,dt
-$$
-
-Compute the integral term-by-term:
-
-$$
-\int t^2\,dt=\frac{t^3}{3},\qquad
-\int 2t\,dt=t^2,\qquad
-\int (-5)\,dt=-5t
-$$
-
-So the general position function is:
-
-$$
-x(t)=\frac{t^3}{3}+t^2-5t+C
-$$
-
-Use the initial condition $x(0)=4$:
-
-$$
-x(0)=\frac{0^3}{3}+0^2-5\cdot 0 + C = C = 4
-$$
-
-Therefore:
-
-$$
-x(t)=\frac{t^3}{3}+t^2-5t+4
-$$
-
-Now evaluate at $t=3$:
-
-$$
-x(3)=\frac{3^3}{3}+3^2-5\cdot 3+4
-=\frac{27}{3}+9-15+4
-=9+9-15+4
-$$
-
-Compute:
-$$
-9+9=18,\qquad 18-15=3,\qquad 3+4=7
-$$
-
-So:
-
-$$
-x(3)=7
-$$
+To go the opposite direction (from acceleration back to velocity, or velocity back to position), you take the **integral**. 
 
 ---
 
-## 2) Acceleration from velocity
+## Part 1: Finding the Acceleration (The Derivative)
 
-Acceleration is the derivative of velocity:
-
-$$
-a(t)=\frac{dv}{dt}
-$$
-
-Differentiate:
+**Step 1: Start with the given velocity formula.**
 
 $$
-v(t)=t^2+2t-5
-\quad\Rightarrow\quad
-a(t)=2t+2
+v(t) = t^2 + 2t - 5
 $$
 
-Evaluate at $t=3$:
+**Step 2: Take the derivative.**
+To find acceleration, we take the derivative of velocity with respect to time ($t$). Using the power rule ($t^n \rightarrow n t^{n-1}$):
+* $t^2$ becomes $2t$
+* $2t$ becomes $2$
+* The constant $-5$ becomes $0$
 
 $$
-a(3)=2\cdot 3 + 2 = 8
+a(t) = 2t + 2
 $$
+
+**Step 3: Solve for $t=3$.**
+The problem asks for the acceleration at $3$ seconds. Plug in $3$ for $t$:
+
+$$
+a(3) = 2(3) + 2
+$$
+
+$$
+a(3) = 6 + 2 = 8
+$$
+
+**Answer 1:** The acceleration at exactly $3$ seconds is **$8$**.
 
 ---
 
-## Final answers
+## Part 2: Finding the Position (The Integral)
+
+**Step 1: Set up the integral.**
+To go from velocity up to position, we take the integral of our original velocity equation.
 
 $$
-x(3)=7
+x(t) = \int (t^2 + 2t - 5) \, dt
 $$
 
+**Step 2: Integrate.**
+Using the reverse power rule (increase the exponent by $1$, then divide by the new exponent):
+* $t^2$ becomes $\frac{1}{3}t^3$
+* $2t$ becomes $t^2$
+* $-5$ becomes $-5t$
+* *Crucial step:* Add the unknown constant of integration, $C$.
+
 $$
-a(3)=8
+x(t) = \frac{1}{3}t^3 + t^2 - 5t + C
 $$
 
----
+**Step 3: Find the starting point ($C$).**
+The problem gives us an initial condition: at $t=0$, the position is $x=4$. Plug $0$ in for $t$ and $4$ in for $x(t)$:
 
-## Plot the velocity and acceleration
+$$
+4 = \frac{1}{3}(0)^3 + (0)^2 - 5(0) + C
+$$
 
-![Velocity and Acceleration Plots](velocity_acceleration_plots.png)
+Since all the terms with $t$ just become zero, we are left with:
+
+$$
+C = 4
+$$
+
+Now we can write our complete, final position formula:
+
+$$
+x(t) = \frac{1}{3}t^3 + t^2 - 5t + 4
+$$
+
+**Step 4: Solve for position at $t=3$.**
+Plug $3$ into our complete position formula:
+
+$$
+x(3) = \frac{1}{3}(3)^3 + (3)^2 - 5(3) + 4
+$$
+
+First, calculate the exponents ($3^3 = 27$ and $3^2 = 9$):
+
+$$
+x(3) = \frac{1}{3}(27) + 9 - 15 + 4
+$$
+
+Multiply the fraction:
+
+$$
+x(3) = 9 + 9 - 15 + 4
+$$
+
+Add and subtract:
+
+$$
+x(3) = 7
+$$
+
+**Answer 2:** The position of the object at exactly $3$ seconds is **$7$**.
