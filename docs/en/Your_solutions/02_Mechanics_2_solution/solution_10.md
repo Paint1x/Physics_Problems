@@ -8,6 +8,8 @@ $$
 
 Find the time dependence of: the particle's velocity, the particle's momentum, the particle's acceleration, the force acting on the particle, and the power transferred by the field to the particle.
 
+
+
 ## 1. The Calculus Crash Course: The "Power Rule"
 
 To solve this, you need a tiny bit of calculus. Specifically, you need to know how to take a **derivative**. A derivative is just a mathematical tool that finds the "rate of change." For example, how fast your position changes is your velocity.
