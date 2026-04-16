@@ -1,8 +1,3 @@
-# Physics: Motion in 3D Space (Kinematics and Dynamics)
-
-Welcome to 3D physics! In this problem, an object is flying through space, and we are given a mathematical map of exactly where it is at any given second ($t$). 
-
-Because the object is moving in 3D space, we have three separate equations: one for left/right ($x$), one for up/down ($y$), and one for forward/backward ($z$). We will treat each direction separately, which makes the math much easier!
 
 ## 1. The Calculus Crash Course: The "Power Rule"
 
