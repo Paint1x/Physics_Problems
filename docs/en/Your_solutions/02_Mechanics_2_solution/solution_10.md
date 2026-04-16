@@ -1,3 +1,12 @@
+## 10. Force field and power
+
+In a certain force field, the equations of motion of a particle with mass $m=0.5$ kg are as follows:
+
+$$
+x = 5t^2 - t, \quad y = 2t^3, \quad z = -3t + 2
+$$
+
+Find the time dependence of: the particle's velocity, the particle's momentum, the particle's acceleration, the force acting on the particle, and the power transferred by the field to the particle.
 
 ## 1. The Calculus Crash Course: The "Power Rule"
 
