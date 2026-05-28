@@ -40,6 +40,3 @@ $$
 E = 0.5 \cdot (10 \times 10^{-6}) \cdot 100 = 500 \times 10^{-6} \text{ J} \text{ (or } 500 \, \mu\text{J})
 $$
 
----
-**🗣️ What to say to the Professor:**
-> *"Because the capacitors are in parallel, I found the equivalent capacitance by simply adding them together, giving $10 \, \mu\text{F}$. To find the total charge, I multiplied this total capacitance by the 10-volt source, resulting in $100 \, \mu\text{C}$. Finally, I used the standard energy formula, one-half $C$ $V$-squared, which gave a total stored energy of $500 \, \mu\text{J}$."*
